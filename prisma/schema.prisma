@@ -1,0 +1,35 @@
+generator client {
+  provider      = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Unverified_Users {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  email     String   @unique
+  username  String
+  password  String
+  otp       String?
+}
+
+model Users {
+  id           Int      @id @default(autoincrement())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  email        String   @unique
+  username     String
+  password     String
+  hashRT       String?
+  role         String   @default("user")
+  signInMethod String   @default("local.com")
+}
+
+model PasswordOtp {
+  id        Int    @id @default(autoincrement())
+  hashOtp   String
+  user_mail String @unique
+}

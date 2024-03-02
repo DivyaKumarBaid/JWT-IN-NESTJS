@@ -1,0 +1,850 @@
+{
+	"info": {
+		"_postman_id": "709319e7-966d-4675-a2bd-9cf6151a280e",
+		"name": "Auth_base_template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15812794",
+		"_collection_link": "https://bold-star-253707.postman.co/workspace/Team-Workspace~8c6835b1-5cd4-4784-8e84-e8909e717320/collection/15812794-709319e7-966d-4675-a2bd-9cf6151a280e?action=share&source=collection_link&creator=15812794"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "local",
+					"item": [
+						{
+							"name": "signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"noket47145@poverts.com\",\r\n    \"password\":\"asdasds\",\r\n    \"username\":\"Noket\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/local/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"local",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "signup",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"noket47145@poverts.com\",\r\n    \"password\":\"asdasds\",\r\n    \"username\":\"Noket\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/auth/local/signup",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"auth",
+												"local",
+												"signup"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "138"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"8a-u2PhlrhhyfZNRNlmwJLVdG1IAmw\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 16:30:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"createdAt\": \"2023-08-26T16:30:22.071Z\",\n    \"updatedAt\": \"2023-08-26T16:30:22.071Z\",\n    \"email\": \"noket47145@poverts.com\",\n    \"username\": \"Noket\"\n}"
+								}
+							]
+						},
+						{
+							"name": "verifyOTP",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"noket47145@poverts.com\",\r\n    \"otp\":\"3562\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/local/verify",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"local",
+										"verify"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "verifyOTP",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"noket47145@poverts.com\",\r\n    \"otp\":\"3562\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/auth/local/verify",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"auth",
+												"local",
+												"verify"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "22"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"16-zmh+Aki27SIX1Cy08Ticr4eiWK0\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 16:30:48 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Verified\"\n}"
+								}
+							]
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"noket47145@poverts.com\",\r\n    \"password\":\"asdasds\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/local/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"local",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"noket47145@poverts.com\",\r\n    \"password\":\"asdasds\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/auth/local/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"auth",
+												"local",
+												"login"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "404"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"194-AbIsXUFfWDL/L3+gNo/PYKbU7Gc\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 16:31:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoibm9rZXQ0NzE0NUBwb3ZlcnRzLmNvbSIsImlhdCI6MTY5MzA2NzQ2OCwiZXhwIjoxNjkzMDY4MzY4fQ.YjawsX7-qMXuuK-WjcbHk_o7eJn7lXF-lkuC8zdpRQw\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoibm9rZXQ0NzE0NUBwb3ZlcnRzLmNvbSIsImlhdCI6MTY5MzA2NzQ2OCwiZXhwIjoxNjkzNjcyMjY4fQ.gSr5DL-TUQhFxxL6oMBtZQxooPLK375gxhDbe_yq00Q\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "password_reset",
+					"item": [
+						{
+							"name": "opt-generation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"noket47145@poverts.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/local/password/otp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"local",
+										"password",
+										"otp"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "opt-generation",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"noket47145@poverts.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/auth/local/password/otp",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"auth",
+												"local",
+												"password",
+												"otp"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "24"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"18-jAAwOveiH9neYQDsglqRTW7hg9w\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 16:31:27 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Email Sent\"\n}"
+								}
+							]
+						},
+						{
+							"name": "verifyOTP",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"noket47145@poverts.com\",\r\n    \"password\":\"new_password\",\r\n    \"otp\":\"8547\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/local/password",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"local",
+										"password"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "verifyOTP",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"noket47145@poverts.com\",\r\n    \"password\":\"new_password\",\r\n    \"otp\":\"8547\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/auth/local/password",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"auth",
+												"local",
+												"password"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "34"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"22-hkFUPDtNn5jlyjWDokjm3+hy2yI\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 16:32:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Changed Successfully\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "google login",
+					"item": [
+						{
+							"name": "signup/signin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImM2MGI5ZGUwODBmZmFmYmZjMTgzMzllY2Q0NGFjNzdmN2ZhNGU4ZDMiLCJ0eXAiOiJKV1QifQ.eyJuYW1ljoiRGl2eWEga3VtYXIgQkFJRCIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQWNIVHRjOHNFaTlVRTFzRmJHdjBucHZzdlBDMVVOVG03VS1RMHlXZWNoazNfVGw9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZS1hdXRoLXRlbXBsYXRlIiwiYXVkIjoiYmFzZS1hdXRoLXRlbXBsYXRlIiwiYXV0aF90aW1lIjoxNjkzMDY3MDY4LCJ1c2VyX2lkIjoiNHRWUUM5SXNib2U1UXVPMDFEUFZ2bzJ3aloxMiIsInN1YiI6IjR0VlFDOUlzYm9lNVF1TzAxRFBWdm8yd2paMTIiLCJpYXQiOjE2OTMwNjcwNjgsImV4cCI6MTY5MzA3MDY2OCwiZW1haWwiOiJkaWJ5YWt1bWFyYmFpZC5ka2IuMjAwMUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjEwNzIxMzEwNzU0MzM5NDU2MjgzOSJdLCJlbWFpbCI6WyJkaWJ5YWt1bWFyYmFpZC5ka2IuMjAwMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.qLQFws8mepL8ALpAuV6K9jC78hWp0_6CMYk44DyvqT8LJPsTOQiikKmY1r5B5AZJl7Y2j01y5A3i2jFiOH8KmlhUt8JXNY9kdZI21NblAWjLx-sReXwaO2qVFJgByqQlGBAgHr3medjArBoiLK68dmQtfDuX3IBxZ5S6wYwufWvSh7dpOm2H414dBZstwJf9QfvfKuBZnLqcKBYhGziuMyfZ_U07cB1dHjb80l4Ey8JiujjXl0ggBZDOthETWJm4P5nviz9NneHri0iTRZGk9B2GXvKkDJAGGcBiotLtWgFeTIz81-XZ1fnNLA6tS0gfsh8r6SUPyscGfXlUYO-lJw\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/google/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"google",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "signup/signin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"token\":\"eyJhbGciOiJSUzI1NIsImtpZCI6ImM2MGI5ZGUwODBmZmFmYmZjMTgzMzllY2Q0NGFjNzdmN2ZhNGU4ZDMiLCJ0eXAiOiJKV1QifQ.eyJuYW1ljoiRGl2eWEga3VtYXIgQkFJRCIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQWNIVHRjOHNFaTlVRTFzRmJHdjBucHZzdlBDMVVOVG03VS1RMHlXZWNoazNfVGw9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZS1hdXRoLXRlbXBsYXRlIiwiYXVkIjoiYmFzZS1hdXRoLXRlbXBsYXRlIiwiYXV0aF90aW1lIjoxNjkzMDY3MDY4LCJ1c2VyX2lkIjoiNHRWUUM5SXNib2U1UXVPMDFEUFZ2bzJ3aloxMiIsInN1YiI6IjR0VlFDOUlzYm9lNVF1TzAxRFBWdm8yd2paMTIiLCJpYXQiOjE2OTMwNjcwNjgsImV4cCI6MTY5MzA3MDY2OCwiZW1haWwiOiJkaWJ5YWt1bWFyYmFpZC5ka2IuMjAwMUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjEwNzIxMzEwNzU0MzM5NDU2MjgzOSJdLCJlbWFpbCI6WyJkaWJ5YWt1bWFyYmFpZC5ka2IuMjAwMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.qLQFws8mepL8ALpAuV6K9jC78hWp0_6CMYk44DyvqT8LJPsTOQiikKmY1r5B5AZJl7Y2j01y5A3i2jFiOH8KmlhUt8JXNY9kdZI21NblAWjLx-sReXwaO2qVFJgByqQlGBAgHr3medjArBoiLK68dmQtfDuX3IBxZ5S6wYwufWvSh7dpOm2H414dBZstwJf9QfvfKuBZnLqcKBYhGziuMyfZ_U07cB1dHjb80l4Ey8JiujjXl0ggBZDOthETWJm4P5nviz9NneHri0iTRZGk9B2GXvKkDJAGGcBiotLtWgFeTIz81-XZ1fnNLA6tS0gfsh8r6SUPyscGfXlUYO-lJw\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/auth/google/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"auth",
+												"google",
+												"login"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "432"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1b0-Lt4w06zn+1Nucy8k5t1a66NA26k\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 16:32:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiZGlieWFrdW1hcmJhaWQuZGtiLjIwMDFAZ21haWwuY29tIiwiaWF0IjoxNjkzMDY3NTMzLCJleHAiOjE2OTMwNjg0MzN9.uuSGv8E_mb6XvYKOVkS2yBmHkZRXdluC_c_w7o7UwGs\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiZGlieWFrdW1hcmJhaWQuZGtiLjIwMDFAZ21haWwuY29tIiwiaWF0IjoxNjkzMDY3NTMzLCJleHAiOjE2OTM2NzIzMzN9.7RRaEmTpZChd6z3N0Sk73PAJMiigjpnNpu3AYwE7CAw\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1iIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoibm9rZXQ0NzE0NUBwb3ZlcnRzLmNvbSIsImlhdCI6MTY5MzA2NzQ2OCwiZXhwIjoxNjkzMDY4MzY4fQ.YjawsX7-qMXuuK-WjcbHk_o7eJn7lXF-lkuC8zdpRQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/auth/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 16:34:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "logout-wrong-access-token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/auth/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-dGnJzt6gv1nJjX6DJ9RztDWptng\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 16:35:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized\",\n    \"statusCode\": 401\n}"
+						}
+					]
+				},
+				{
+					"name": "Refresh-access-token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoibm9rZXQ0NzE0NUBwb3ZlcnRzLmNvbSIsImlhdCI6MTY5MzA2Nzk0MywiZXhwIjoxNjkzNjcyNzQzfQ.t9qjI4FQKiH68VWiBo-jorHw7gwjC08b6sdCbSmZy-o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Refresh-access-token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/refresh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"refresh"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "404"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"194-sOwsrZ6Rr8nEItYDH1F22qte8mI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 16:39:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoibm9rZXQ0NzE0NUBwb3ZlcnRzLmNvbSIsImlhdCI6MTY5MzA2Nzk1MSwiZXhwIjoxNjkzMDY4ODUxfQ.1YeitKPbHwJlwHrtZ2cp9G9_BymK_tVuj9EJwLZ2fag\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoibm9rZXQ0NzE0NUBwb3ZlcnRzLmNvbSIsImlhdCI6MTY5MzA2Nzk1MSwiZXhwIjoxNjkzNjcyNzUxfQ.kxJ838eKTU2lZHHz-ZF0M2uZtHrTzirYKoeSk1I26kE\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "refresh_token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoibm9rZXQ0NzE0NUBwb3ZlcnRzLmNvbSIsImlhdCI6MTY5MzA2NzQ2OCwiZXhwIjoxNjkzNjcyMjY4fQ.gSr5DL-TUQhFxxL6oMBtZQxooPLK375gxhDbe_yq00Q"
+		},
+		{
+			"key": "access_token",
+			"value": "eyJhbGciOiJIUzI1iIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoibm9rZXQ0NzE0NUBwb3ZlcnRzLmNvbSIsImlhdCI6MTY5MzA2NzQ2OCwiZXhwIjoxNjkzMDY4MzY4fQ.YjawsX7-qMXuuK-WjcbHk_o7eJn7lXF-lkuC8zdpRQw"
+		}
+	]
+}
